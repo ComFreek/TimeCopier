@@ -7,7 +7,6 @@ function Copy-Date {
 
 function Init-Gui {
 	$NotifyIcon = New-Object System.Windows.Forms.NotifyIcon
-	$NotifyIcon.ContextMenu = New-Object System.Windows.Forms.ContextMenu
 	$NotifyIcon.Icon = New-Object System.Drawing.Icon(Join-Path $PSScriptRoot "icon.ico")
 	$NotifyIcon.Visible = $True
 
