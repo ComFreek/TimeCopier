@@ -13,7 +13,7 @@ function Init-Gui {
 
 	Register-ObjectEvent -MessageData ${function:Copy-Date} -InputObject $NotifyIcon -EventName Click -Action {
 			$Event.MessageData.Invoke()
-			$Sender.ShowBalloonTip(250, "Success", "Date & Time copied!", [  System.Windows.Forms.ToolTipIcon]::Info);
+			$Sender.ShowBalloonTip(250, "Success", "Date & Time copied!", [System.Windows.Forms.ToolTipIcon]::Info);
 	} | Out-Null
 }
 Init-Gui
