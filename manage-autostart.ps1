@@ -11,13 +11,12 @@ if ((Get-ItemProperty .).$entry -eq $null) {
 }
 else {
 	Write-Host "Autostart entry already exists!"
-  Write-Host "Current value: " (Get-ItemProperty .).$entry
+	Write-Host "Current value: " (Get-ItemProperty .).$entry
 	Write-Host "`n"
 
 	$title = ""
 	$message = "Do you want to delete the autostart entry?"
 	$yes = New-Object System.Management.Automation.Host.ChoiceDescription "`&Yes",""
-	
 	$no = New-Object System.Management.Automation.Host.ChoiceDescription "`&No",""
 	
 	$options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
